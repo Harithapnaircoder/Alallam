@@ -1,0 +1,111 @@
+/*background image*/
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('images/240_F_878757034_5tGNklKU39uDj3plzGRcot5OzTiUlPtM.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    position: relative; 
+}
+
+.logo {
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    width: 55px; 
+    height: auto; 
+    border-radius: 10px; 
+}
+/*text*/
+.content {
+    text-align: left;
+    padding-left: 65px;
+    z-index: 1; 
+}
+
+.styled-head {
+    color: rgb(190, 184, 184);
+    margin: 0;
+    font-size: 18px;
+}
+
+.styled-text {
+    color: rgb(254, 249, 249); 
+    margin: 0;
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*side image*/
+.overlapp {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 30%; 
+    height: auto;
+    z-index: 0; 
+    border-radius: 20px; 
+}
+
+/*To make page responsive in different screen size and avoid overlapp*/
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        top: 40px;
+        left: 40px;
+        width: 45px;
+    }
+
+    .content {
+        padding-left: 40px;
+    }
+
+    .styled-head {
+        font-size: 16px;
+    }
+
+    .styled-text {
+        font-size: 22px;
+    }
+
+    .overlapp {
+        width: 40%;
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+    body {
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
+    .logo {
+        top: 20px;
+        left: 20px;
+        width: 35px;
+    }
+
+    .content {
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .styled-head {
+        font-size: 14px;
+    }
+
+    .styled-text {
+        font-size: 18px;
+    }
+
+    .overlapp {
+        width: 60%;
+        top: 70%;
+        transform: translateY(-70%);
+    }
+}
